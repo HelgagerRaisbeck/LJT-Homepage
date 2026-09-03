@@ -31,6 +31,17 @@ Awards
 ======
 - Zhiyuan Honor Scholarship at Shanghai Jiao Tong University (2024)
 
+Publications
+======
+{% for post in site.publications reversed %}
+  {% if post.citation %}
+  <div style="margin-bottom: 20px;">
+    <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    <p style="font-size: smaller;">{{ post.citation }}</p>
+  </div>
+  {% endif %}
+{% endfor %}
+
 Contact
 ======
 - Email: jliugi@connect.ust.hk
